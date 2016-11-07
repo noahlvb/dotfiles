@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+# Custom
+alias please=sudo
+alias hosts='sudo $EDITOR /etc/hosts'
+
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
+
+# Shortcuts
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias lw="cd ~/Workspace"
+alias dw="cd ~/Dropbox/workspace"
+alias g="git"
+alias h="history"
+alias j="jobs"
+
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+	colorflag="--color"
+else
+	colorflag='-G'
+fi
+
+# List all files colorized in long format
+alias l='ls -lF $colorflag'
+
+# List all files colorized in long format, including dot files
+alias la='ls -laF $colorflag'
+
+# List all files colorized including filesize in human readable form
+alias lasizes='ls -lh $colorflag'
+
+# List only directories
+alias lsd='ls -lF $colorflag | grep --color=never "^d"'
+
+# Get week number
+alias week='date +%V'
+
+# get updates from the varius package managers
+alias update='npm install npm -g; npm update -g;'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr eth0"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# View HTTP traffic
+alias sniff="sudo ngrep -d 'eth0' -t '^(GET|POST) ' 'tcp and port 80'"
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload='exec $SHELL -l'

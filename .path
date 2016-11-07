@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Add `~/bin` to the `$PATH`
+export PATH="$HOME/bin:$PATH";
+
+# Add Brew
+export PATH="/usr/local/sbin:$PATH";
+
+# Add npm global packages
+export PATH="/usr/local/lib/node_modules:$PATH";

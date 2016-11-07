@@ -1,0 +1,73 @@
+[user]
+	email = noahlvb@gmail.com
+	name = Noah van Bochove
+
+[github]
+	user = noahlvb
+
+[core]
+	excludeFile = ~/.gitignore_global
+	editor = nano
+
+[pager]
+	diff = diff-so-fancy | less --tabs=4 -RFX
+	show = diff-so-fancy | less --tabs=4 -RFX
+
+[interactive]
+	diffFilter = "diff-so-fancy"
+
+[color]
+	ui = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[push]
+	default = current
+
+[hub]
+	protocal = https
+
+[alias]
+	s = status -s
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+	c = clone --recursive
+	ca = !git add -A && git commit -av
+	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+	tags = tag -l
+	branches = branch -all
+	br = branch -all
+	remotes = remote -v
+	amend = commit --amend -reuse-message=HEAD
+	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+	aa = add --all
+	noff = merge --no-ff
+	fa = fetch --all
+
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+
+[merge]
+    tool = meld
+[mergetool "meld"]
+    # Choose one of these 2 lines (not both!) explained below.
+    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+    #cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
