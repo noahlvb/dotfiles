@@ -1,11 +1,11 @@
 # Dotfiles
 
-Pretty much forked from @mathiasbynens and influenced by @thabemmz. But I hand wrote every thing form the other repos so that i understand what is going on and i learn better this way.
+Pretty much forked from [Mathias Bynens](https://mathiasbynens.be/) and influenced by [Christiaan van Bemmel](https://github.com/thabemmz/)@thabemmz. But I hand wrote every thing form the other repos so that i understand what is going on and i learn better this way.
 
 ## TODO
 
 - [ ] Add preferences for Ubuntu machines
-- [ ] Also symlink folders
+- [x] Also symlink folders
 - [ ] Adding functions to .functions like extracting tar,zip,rar, etc
 
 ## Installation
@@ -14,6 +14,8 @@ Pretty much forked from @mathiasbynens and influenced by @thabemmz. But I hand w
 ### Using Git and the bootstrap script
 
 You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder and install a list of packages.
+
+MAKE SURE YOU CHANGE YOUR GITHUB NAME AND EMAIL ADDRESS
 
 ```bash
 git clone https://github.com/noahlvb/dotfiles.git && cd dotfiles && source bootstrap.sh
@@ -40,6 +42,11 @@ Here’s an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
 ```bash
 export PATH="/usr/local/bin:$PATH"
 ```
+
+### Using private exports
+
+When you want to use private exports for environment variables for example. I store my .private file under Dropbox
+
 # Feedback
 
 Suggestions/improvements
