@@ -19,35 +19,42 @@ function rsyncIt() {
 }
 
 function symlinkIt() {
-  filesToLoop=$1;
-  homeDir=$2;
-  force=${3-false};
+    filesToLoop=$1;
+    homeDir=$2;
+    force=${3-false};
 
-  if [[ -z "$filesToLoop" || -z "$homeDir" ]]; then
-    echo "Missing params";
-    exit;
-  fi
-
-  for fileName in $filesToLoop
-  do
-    if [ -d "$fileName" ]; then
-      continue;
+    if [[ -z "$filesToLoop" || -z "$homeDir" ]]; then
+        echo "Missing params";
+        exit;
     fi
 
-    if [[ -f "$homeDir/$fileName" || -L "$homeDir/$fileName" ]]; then
-      if [ "$force" != true ]; then
-        read -p "Override $fileName? (y/n) " -n 1;
-        echo "";
-        if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-          echo "Skipping...";
-          continue;
+    for fileName in $filesToLoop
+    do
+        if [[ -d "$fileName" && "$fileName" != ".atom" ]]; then
+            continue;
         fi
-      fi
-    fi
 
-    echo "Creating symlink...";
-    ln -sf "`pwd`/$fileName" "$homeDir/$fileName";
-  done
+        if [[ -f "$homeDir/$fileName" || -L "$homeDir/$fileName" ]]; then
+            if [ "$force" != true ]; then
+                read -p "Override $fileName? (y/n) " -n 1;
+                echo "";
+                if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+                    echo "Skipping...";
+                    continue;
+                fi
+            fi
+        fi
+
+        echo "Creating symlink...";
+        if [ -d "$fileName" ]; then
+            if [ ! -d "$homeDir/$fileName/" ]; then
+                mkdir -p "$homeDir/$fileName/";
+            fi
+            ln -sf `pwd`/$fileName/* "$homeDir/$fileName/";
+        else
+            ln -sf "`pwd`/$fileName" "$homeDir/$fileName";
+        fi;
+    done
 }
 
 while getopts "m:f" OPTION
