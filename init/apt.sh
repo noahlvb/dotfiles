@@ -12,8 +12,8 @@ sudo cp sources/bootstrap_sources.list /etc/apt/sources.list.d/bootstrap_sources
 
 # Updating repo's
 e_header "Updating repo's"
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get -y update
+sudo apt-get -y upgrade
 
 # Installing packages
 packages=(
