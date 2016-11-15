@@ -30,8 +30,11 @@ function symlinkIt() {
 
     for fileName in $filesToLoop
     do
-        if [[ -d "$fileName" && "$fileName" != ".atom" ]]; then
-            continue;
+        if [ -d "$fileName" ]; then
+	    if [ "$fileName" == ".git" ] || [ "$fileName" == ".." ] || [ "$fileName" == "." ] ; then
+	    	echo "$fileName";
+              	continue;
+	    fi
         fi
 
         if [[ -f "$homeDir/$fileName" || -L "$homeDir/$fileName" ]]; then
