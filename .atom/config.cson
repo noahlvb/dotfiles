@@ -1,6 +1,6 @@
 "*":
   editor:
-    fontSize: 15
+    fontSize: 13
     scrollPastEnd: true
     showIndentGuide: true
     tabLength: 4

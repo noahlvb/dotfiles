@@ -7,3 +7,5 @@ sudo npm update -g
 
 sudo npm install -g diff-so-fancy
 sudo npm install -g is-online
+sudo npm install -g node-inspector
+sudo npm install -g nodemon
