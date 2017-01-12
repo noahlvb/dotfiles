@@ -116,3 +116,45 @@ function a() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+# SSH Tunnel
+tunnel() {
+	TARGET_HOST=${1?Need a target host}
+	TARGET_PORT=${2:-9200}
+	TUNNEL_PORT_RANGE_100=${3:-11000}
+
+	local random_100
+	# LC_CTYPE hack described here: http://nerdbynature.de/s9y/?176
+	random_100=$(LC_CTYPE=C tr -cd 0-9 </dev/urandom | head -c 2)
+	TUNNEL_PORT=$(($TUNNEL_PORT_RANGE_100 + 10#$random_100))
+
+	echo "Starting tunnel to ${TARGET_HOST}:${TARGET_PORT} from local port $TUNNEL_PORT.."
+	ssh -NL "${TUNNEL_PORT}:localhost:${TARGET_PORT}" "$TARGET_HOST" >/dev/null &
+	SSH_TUNNEL_PID="$!"
+
+	# Give the tunnel a chance to establish itself
+	sleep 2
+
+	# Test if connection succeeded
+	lsof -Fp -i ":$TUNNEL_PORT" | grep "p$SSH_TUNNEL_PID" >/dev/null
+	if [ $? -ne 0 ]; then
+		echo "Failed to create SSH tunnel at local port $TUNNEL_PORT"
+		closetunnel >/dev/null # Just to be sure
+		return 1
+	else
+		echo "Tunnel is active"
+	fi
+}
+
+closetunnel() {
+	if [ -z "$SSH_TUNNEL_PID" ]; then
+		echo "No tunnel to close"
+		return
+	fi
+	echo "Closing SSH tunnel.."
+	kill $SSH_TUNNEL_PID >/dev/null
+	if [ $? -ne 0 ]; then
+		echo "Failed to kill SSH tunnel with PID $SSH_TUNNEL_PID"
+		return 1
+	fi
+}
