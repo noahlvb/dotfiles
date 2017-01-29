@@ -9,6 +9,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Adding Repo's
 e_header "Adding repo's"
 sudo cp sources/bootstrap_sources.list /etc/apt/sources.list.d/bootstrap_sources.list
+sudo curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 
 # Updating repo's
 e_header "Updating repo's"
@@ -21,21 +22,20 @@ packages=(
     bash-completion
     ngrep
     git
-    atom
     build-essential
     docker-engine
-    fleet
     gimp
-    gitkraken
     google-chrome-stable
     gparted
     nodejs
+    npm
     spotify-client
 )
+
 
 if (( ${#packages[@]} > 0 )); then
   e_header "Installing APT packages: ${packages[*]}"
   for package in "${packages[@]}"; do
-    sudo apt-get -qq install "$package"
+    sudo apt-get -qq -y --allow-unauthenticated install "$package"
   done
 fi
