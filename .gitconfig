@@ -6,7 +6,7 @@
 	user = noahlvb
 
 [core]
-	excludeFile = ~/.gitignore_global
+	excludesFile = ~/.gitignore_global
 	editor = nano
 
 [pager]
