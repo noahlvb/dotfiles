@@ -5,6 +5,7 @@
 METHOD="symlink";
 FORCE=false;
 DEST="$HOME";
+sshkeys="$homeDir/Dropbox/ssh-keys";
 
 # Logging stuff.
 function e_header()   { echo -e "\n\033[1m$@\033[0m"; }
@@ -85,6 +86,11 @@ if [ "$METHOD" == "rsync" ]; then
     fi;
   fi;
 fi;
+
+for fileName in $sshkeys
+do
+	cp $fileName/* "$homeDir/.ssh/";
+done
 
 for init in init/*.sh; do
 	source ./"$init";

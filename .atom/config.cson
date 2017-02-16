@@ -2,7 +2,6 @@
   core:
     telemetryConsent: "limited"
   editor:
-    fontSize: 15
     scrollPastEnd: true
     showIndentGuide: true
     tabLength: 4
