@@ -1,4 +1,6 @@
 "*":
+  "atom-clock":
+    dateFormat: "HH:mm"
   core:
     telemetryConsent: "limited"
   editor:
