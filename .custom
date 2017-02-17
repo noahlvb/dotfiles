@@ -2,4 +2,4 @@
 
 # I use multiple SSH-keys, like it better that way. Add all of them
 ssh-add ~/.ssh/id_rsa &>/dev/null;
-ssh-add ~/.ssh/id_rsa.semaphore &>/dev/null;
+ssh-add ~/.ssh/semaphore_rsa &>/dev/null;
