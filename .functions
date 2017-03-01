@@ -117,6 +117,14 @@ function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
 
+#starts a php server from this directory
+function phpserver() {
+	local port="${2:-4000}";
+	local ip=${1?Need a target ip};
+	sleep 1 && open "http://${ip}:${port}/" &
+	php -S "${ip}:${port}";
+}
+
 # SSH Tunnel
 tunnel() {
 	TARGET_HOST=${1?Need a target host}
