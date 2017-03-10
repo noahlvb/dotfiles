@@ -8,7 +8,11 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Adding Repo's
 e_header "Adding repo's"
-sudo cp sources/bootstrap_sources.list /etc/apt/sources.list.d/bootstrap_sources.list
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo add-apt-repository "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
+sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
 sudo curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 
 # Updating repo's
@@ -23,7 +27,7 @@ packages=(
     ngrep
     git
     build-essential
-    docker-engine
+    docker-ce
     gimp
     google-chrome-stable
     gparted
