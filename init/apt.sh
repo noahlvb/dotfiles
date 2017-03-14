@@ -13,7 +13,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo add-apt-repository "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
 sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
-sudo curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 
 # Updating repo's
 e_header "Updating repo's"
