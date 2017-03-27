@@ -5,7 +5,7 @@
 METHOD="symlink";
 FORCE=false;
 DEST="$HOME";
-sshkeys="$homeDir/Dropbox/ssh-keys";
+sshkeys="$DEST/Dropbox/ssh-keys";
 
 # Logging stuff.
 function e_header()   { echo -e "\n\033[1m$@\033[0m"; }
