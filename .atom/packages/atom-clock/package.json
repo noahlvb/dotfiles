@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-11723-19562-1s9colu/package.tgz",
+        "raw": "/tmp/d-117419-4696-1aicm8i/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-11723-19562-1s9colu/package.tgz",
-        "spec": "/tmp/d-11723-19562-1s9colu/package.tgz",
+        "rawSpec": "/tmp/d-117419-4696-1aicm8i/package.tgz",
+        "spec": "/tmp/d-117419-4696-1aicm8i/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-11723-19562-ivpia7"
+      "/tmp/apm-install-dir-117419-4696-1exw2i2"
     ]
   ],
-  "_from": "../d-11723-19562-1s9colu/package.tgz",
-  "_id": "atom-clock@0.1.5",
+  "_from": "../d-117419-4696-1aicm8i/package.tgz",
+  "_id": "atom-clock@0.1.7",
   "_inCache": true,
   "_installable": true,
   "_location": "/atom-clock",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-11723-19562-1s9colu/package.tgz",
+    "raw": "/tmp/d-117419-4696-1aicm8i/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-11723-19562-1s9colu/package.tgz",
-    "spec": "/tmp/d-11723-19562-1s9colu/package.tgz",
+    "rawSpec": "/tmp/d-117419-4696-1aicm8i/package.tgz",
+    "spec": "/tmp/d-117419-4696-1aicm8i/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-11723-19562-1s9colu/package.tgz",
-  "_shasum": "1269067343b7e008e6b416e75c8dd56553c70e7c",
+  "_resolved": "file:../d-117419-4696-1aicm8i/package.tgz",
+  "_shasum": "7f372208b5db181290c887ed0c7e63da598f894f",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-11723-19562-1s9colu/package.tgz",
-  "_where": "/tmp/apm-install-dir-11723-19562-ivpia7",
+  "_spec": "/tmp/d-117419-4696-1aicm8i/package.tgz",
+  "_where": "/tmp/apm-install-dir-117419-4696-1exw2i2",
   "author": {
     "name": "Antonio Bevilacqua",
     "email": "b3by.in.th3.sky@gmail.com",
@@ -54,8 +54,10 @@
   "dependencies": {
     "moment": "^2.17.x"
   },
-  "description": "Display a clock in the status bar.",
-  "devDependencies": {},
+  "description": "Display a customizable clock in the status bar.",
+  "devDependencies": {
+    "mockdate": "^2.0.1"
+  },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
@@ -63,6 +65,8 @@
   "keywords": [
     "clock",
     "time",
+    "date",
+    "statusbar",
     "momentjs"
   ],
   "license": "MIT",
@@ -75,5 +79,5 @@
     "type": "git",
     "url": "git+https://github.com/b3by/atom-clock.git"
   },
-  "version": "0.1.5"
+  "version": "0.1.7"
 }
