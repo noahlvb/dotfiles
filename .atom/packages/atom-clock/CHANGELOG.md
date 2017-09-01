@@ -1,3 +1,58 @@
+## 0.1.15
+* UTC class added to clock items and tooltip, so that customization is possible
+  when the UTC time is enabled
+  (see [pull request](https://github.com/b3by/atom-clock/pull/43)).
+* :memo: Customization tips added to the README file.
+* :crown: Hall of fame in the README file! Thank you collaborators!
+
+## 0.1.14
+* Tooltip class allows basic customization for font, size and color
+  (see [pull request](https://github.com/b3by/atom-clock/pull/40) and
+  related [issue](https://github.com/b3by/atom-clock/issues/35)).
+* README typos fixing.
+
+## 0.1.13
+* New feature!! UTC time can be shown as well, instead of the regular time
+(every detail in the fantastic [pull request](https://github.com/b3by/atom-clock/pull/38)).
+* :white_check_mark: Specs added for the UTC feature.
+* Configuration items rearranged, some dots added.
+* README file rearranged.
+* :arrow_up: `moment` updated to 2.18
+
+
+## 0.1.12
+* :fire: Style file removed from the package
+  (see [pull request](https://github.com/b3by/atom-clock/pull/36)).
+* :fire: Empty keybinding folder removed.
+* :white_check_mark: [AppVeyor](https://ci.appveyor.com/project/b3by/atom-clock) added as CI
+  service: upgrayedd to double-dose of pimpin'.
+
+## 0.1.11
+* :green_heart: Travis fixed so that the configuration file is aligned with the
+  one from Atom itself ([here](https://github.com/b3by/atom-clock/pull/34) for the pull request).
+
+## 0.1.10
+* New priority set for the clock, so that now it should be placed at the very
+right of the bar (at least, compared to other core packages). Should be this
+defined into a new configuration item, that's still unclear.
+* README file style fixed.
+
+## 0.1.9
+* New tooltip added to the configuration, so a more extensive date format can
+be displayed when the mouse is over the clock (check pull
+request [here](https://github.com/b3by/atom-clock/pull/29)).
+
+## 0.1.8
+* :bug: Clock is redrawn so that its alignment is fixed with the system status
+bar elements (see issue [here](https://github.com/b3by/atom-clock/issues/27)
+and pull request [here](https://github.com/b3by/atom-clock/pull/25) - the
+pull request was not accepted eventually, but it highly inspired my changes,
+that and the `status-bar` package).
+* :bug: Menu label is updated so that it is more user friendly (check pull
+  request [here](https://github.com/b3by/atom-clock/pull/28)).
+* :green_heart: Travis build fixed with new Linux image (again, check pull
+  request [here](https://github.com/b3by/atom-clock/pull/28)).
+
 ## 0.1.7
 * :white_check_mark: New tests added to make the package more robust. The
 configuration items are now tested so that when the clock format or the clock

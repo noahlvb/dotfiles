@@ -24,12 +24,30 @@ export default {
       default: 60,
       minimum: 1,
       order: 3
+    }, showTooltip: {
+      type: 'boolean',
+      title: 'Enable tooltip',
+      description: 'Enables a customisable tooltip when you hover over the time.',
+      default: false,
+      order: 4
+    }, tooltipDateFormat: {
+      type: 'string',
+      title: 'Tooltip time format',
+      description: 'Specify the time format in the tooltip. [Here](http://momentjs.com/docs/#/displaying/format/) you can find all the available formats.',
+      default: 'LLLL',
+      order: 5
+    }, showUTC: {
+      type: 'boolean',
+      title: 'Display UTC time',
+      description: 'Use UTC to display the time instead of local time.',
+      default: false,
+      order: 6
     }, showClockIcon: {
       type: 'boolean',
       title: 'Icon clock',
-      description: 'Show clock icon in the status bar?',
+      description: 'Show a clock icon next to the time in the status bar.',
       default: false,
-      order: 4
+      order: 7
     }
   },
 

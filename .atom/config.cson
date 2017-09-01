@@ -4,6 +4,7 @@
   core:
     telemetryConsent: "limited"
   editor:
+    fontSize: 15
     scrollPastEnd: true
     showIndentGuide: true
     tabLength: 4
@@ -15,6 +16,7 @@
     ignoreWhitespace: true
     leftEditorColor: "red"
     rightEditorColor: "green"
+    scrollSyncType: "Vertical + Horizontal"
     syncHorizontalScroll: true
   welcome:
     showOnStartup: false

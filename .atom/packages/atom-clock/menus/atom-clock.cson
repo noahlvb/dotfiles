@@ -2,11 +2,15 @@
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'atom-clock'
+      'label': 'Atom Clock'
       'submenu': [
         {
           'label': 'Toggle clock in status bar'
           'command': 'atom-clock:toggle'
+        },
+        {
+          'label': 'Toggle UTC mode'
+          'command': 'atom-clock:utc-mode'
         }
       ]
     ]
