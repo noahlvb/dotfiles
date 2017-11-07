@@ -35,6 +35,15 @@ packages=(
     npm
     spotify-client
     vlc
+    wine
+    wireshark
+    virtualbox
+    teamviewer
+    skypeforlinux
+    plymouth
+#   -- Python --
+    python3-xmltodict
+    python3-flask
 #   ---- PHP ---
     php-common
     php7.0

@@ -3,6 +3,10 @@
     dateFormat: "HH:mm"
   core:
     telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
   editor:
     fontSize: 16
     scrollPastEnd: true
@@ -10,6 +14,8 @@
     tabLength: 4
   "exception-reporting":
     userId: "6039a4b9-23d0-9d11-2cba-a5f1baa32995"
+  "git-blame":
+    columnWidth: 321
   minimap: {}
   "seti-ui": {}
   "split-diff":
@@ -19,5 +25,7 @@
     rightEditorColor: "green"
     scrollSyncType: "Vertical + Horizontal"
     syncHorizontalScroll: true
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
