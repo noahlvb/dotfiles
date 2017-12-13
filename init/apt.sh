@@ -14,7 +14,7 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo add-apt-repository "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
 sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
 sudo add-apt-repository "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse"
-sudo curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+sudo curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 
 # Updating repo's
 e_header "Updating repo's"

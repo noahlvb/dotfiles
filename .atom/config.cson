@@ -8,7 +8,7 @@
       "base16-tomorrow-dark-theme"
     ]
   editor:
-    fontSize: 16
+    fontSize: 15
     scrollPastEnd: true
     showIndentGuide: true
     tabLength: 4
