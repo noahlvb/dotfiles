@@ -2,6 +2,7 @@
   "atom-clock":
     dateFormat: "HH:mm"
   core:
+    projectHome: "/home/noah/dropbox/workspace"
     telemetryConsent: "limited"
   editor:
     fontSize: 15
@@ -22,7 +23,6 @@
     rightEditorColor: "green"
     scrollSyncType: "Vertical + Horizontal"
     syncHorizontalScroll: true
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tree-view": {}
   welcome:
     showOnStartup: false
