@@ -1,6 +1,7 @@
 [user]
 	email = noahlvb@gmail.com
 	name = noahlvb
+	signingkey = ABB82A5076CEDF9C
 
 [github]
 	user = noahlvb
@@ -46,7 +47,7 @@
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 	c = clone --recursive
-	ca = !git add -A && git commit -av
+	ca = !git add -A && git commit -S -av
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 	tags = tag -l
 	branches = branch -all
