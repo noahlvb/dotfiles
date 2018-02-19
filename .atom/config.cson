@@ -5,7 +5,7 @@
     projectHome: "/home/noah/dropbox/workspace"
     telemetryConsent: "limited"
   editor:
-    fontSize: 16
+    fontSize: 15
     scrollPastEnd: true
     showIndentGuide: true
     tabLength: 4

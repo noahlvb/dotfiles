@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-118017-4935-jsn45b.dun3a0pb9/package.tgz",
+        "raw": "/tmp/d-118118-8912-zry7c1.ul2ph0vn29/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-118017-4935-jsn45b.dun3a0pb9/package.tgz",
-        "spec": "/tmp/d-118017-4935-jsn45b.dun3a0pb9/package.tgz",
+        "rawSpec": "/tmp/d-118118-8912-zry7c1.ul2ph0vn29/package.tgz",
+        "spec": "/tmp/d-118118-8912-zry7c1.ul2ph0vn29/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-118017-4935-r71l5g.hcmdtsatt9"
+      "/tmp/apm-install-dir-118118-8912-uxextu.38pkzz1tt9"
     ]
   ],
-  "_from": "../d-118017-4935-jsn45b.dun3a0pb9/package.tgz",
-  "_id": "teletype@0.6.0",
+  "_from": "../d-118118-8912-zry7c1.ul2ph0vn29/package.tgz",
+  "_id": "teletype@0.8.0",
   "_inCache": true,
   "_location": "/teletype",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-118017-4935-jsn45b.dun3a0pb9/package.tgz",
+    "raw": "/tmp/d-118118-8912-zry7c1.ul2ph0vn29/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-118017-4935-jsn45b.dun3a0pb9/package.tgz",
-    "spec": "/tmp/d-118017-4935-jsn45b.dun3a0pb9/package.tgz",
+    "rawSpec": "/tmp/d-118118-8912-zry7c1.ul2ph0vn29/package.tgz",
+    "spec": "/tmp/d-118118-8912-zry7c1.ul2ph0vn29/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-118017-4935-jsn45b.dun3a0pb9/package.tgz",
-  "_shasum": "f32f1d0d3fdaffefdc525f93b96fb416c4ccea28",
+  "_resolved": "file:../d-118118-8912-zry7c1.ul2ph0vn29/package.tgz",
+  "_shasum": "4f598cc1cc4f4a65476cdb48c481cc47b287bcc3",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-118017-4935-jsn45b.dun3a0pb9/package.tgz",
-  "_where": "/tmp/apm-install-dir-118017-4935-r71l5g.hcmdtsatt9",
+  "_spec": "/tmp/d-118118-8912-zry7c1.ul2ph0vn29/package.tgz",
+  "_where": "/tmp/apm-install-dir-118118-8912-uxextu.38pkzz1tt9",
   "atomTestRunner": "./test/setup",
   "author": "",
   "bugs": {
@@ -71,7 +71,7 @@
     }
   },
   "dependencies": {
-    "@atom/teletype-client": "^0.32.0",
+    "@atom/teletype-client": "^0.33.0",
     "etch": "^0.12.6"
   },
   "description": "Share your workspace with team members and collaborate on code in real time",
@@ -118,5 +118,5 @@
       "test/fixtures"
     ]
   },
-  "version": "0.6.0"
+  "version": "0.8.0"
 }

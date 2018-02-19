@@ -19,7 +19,7 @@ sudo curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 # Updating repo's
 e_header "Updating repo's"
 sudo apt-get -y update
-sudo apt-get -y upgrade
+sudo apt-get -y upgrade --allow-unauthenticated
 
 # Installing packages
 packages=(
